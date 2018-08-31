@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ 
+     padding:0;
+	 text-align:center;
+	 margin: 0;} 
+	 a 
+	 {text-decoration:none}
+    
+	nav{  
+        background: rgba(0,0,0,.3);
+		display: block;
+        width: 100%;  
+        height: 60px;       
+        position: absolute;  
+        z-index: 10;  
+    }  
+    nav ul{  
+		 width: 1500px;
+		position: relative;
+		font: 12px Microsoft YaHei,arial,Helvetica,sans-serif;
+        list-style: none;  
+        margin: 0 auto;  
+		padding: 0;  
+    }  
+    nav ul li{  
+        text-align: center;  
+        float: left;  
+        line-height: 60px;  
+    }  
+    nav ul li a{  
+        width: 100px;  
+        color: #fff;  
+        font-size: 20px;  
+        font-weight: 600;  
+        display: block;  
+    }  
+    nav ul li a:hover,nav ul li a:visited{  
+        text-decoration: none;  
+        background:rgba(0,0,0,.5); 
+        color: #fff;  
+    }  
+	 
+	 #yemei{
+		 text-align: center;
+		 margin: 0 auto;
+		background-image:url(images/1.png);
+		height:180px;
+		}
+		#denglu{float:right;} 
+	    #zhuce{ float:right;}
+	
+
+	#sousuokuang {
+	    width: 1500px;
+		height:40px;
+		top:110px;
+		margin: 0 auto;
+	    position: relative; 
+
+		}
+	
+		#sousuokuang1 {
+		    padding: 0 12px;
+			width:300px;
+			color: #222;
+			font-size: 12px;
+			height:40px;
+			background-color: rgba(255, 255, 255, 0.88);
+		    border-radius: 6px;
+			border: 0;
+		    position: absolute;
+			right: 80px;
+		
+
+		}
+
+		#sousuokuang2 {
+			width: 80px;
+			height: 40px;
+			background-color: #0CF;
+			color: #FFF;
+			border: 0;
+			font-size: 18px;
+			font-family: 楷体;
+			cursor: pointer;
+    		position: absolute;
+			right: 0;
+			border-radius: 6px;
+		}
+
+	
+
+
+
+
+
+
+
+	#outer{
+		width: 1500px;
+		height:1400px;
+		margin: 0 auto;
+        position:relative;
+		}
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+	#no1{
+		width:100%;
+		height: 50px;
+		float:left;
+		}
+		
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+}
+
+
+
+ul#导航>li{
+	float: left;
+}
+
+ul#导航>li>a{
+    font-family: 微软雅黑;
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    line-height:2;
+    font-size: 25px;
+    font-weight:600;
+}
+
+ul#导航>li>a:hover{
+	
+	color:#09F;	
+}
+
+	
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		/*-----------*/
+		
+
+.rank-menu li {
+    width: 115px;
+    font-size: 30px;
+	font-family:微软雅黑;
+    cursor: pointer;
+	height:40px;
+    line-height: 25px;
+    padding-top: 0px;
+    padding-right: 12px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    position: relative;
+    display: inline-block;
+	margin-left: 52px;
+	
+}
+
+
+.on{color: #333333;}
+.on>a:hover{
+	color: #09F;
+}				
+
+
+
+#container{ width:100%;
+		height:1200px;
+		
+		text-align:center;
+		}
+
+#f1{ width:100%;
+	height: 1100px;
+	border: none;
+	text-align:center;
+	
+	}	
+
+
+
+
+
+#no6{
+		position: relative;
+		margin-top:-180px;
+	    height:150px;
+		width:100%;
+        background-size: cover;
+        display: inline-block;
+		text-align:center;
+		}
+		
+	.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	cursor: pointer;
+	text-align:center;
+	text-decoration: none;
+	font:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding: .5em 2em .55em;
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	}
+.button:hover {
+	text-decoration: none;
+	color:#06F;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.ros {
+	color: #fae7e9;
+	border: solid 1px #b73948;
+	background: #da5867;
+}
+.bigrounded {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+.页尾1>a{color: #333333;}
+.页尾1>a:hover{color:#0CC;}
+.页尾2>a{color: #333333;}
+.页尾2>a:hover{color:#0CC;}

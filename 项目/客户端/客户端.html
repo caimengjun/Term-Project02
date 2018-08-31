@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="客户端.css">
+</head>
+<body>
+    <div id="yemei">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">主站</a></li>
+                <li><a href="#">画友</a></li>
+                <li><a href="#">游戏中心</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">周边</a></li>
+                <li><a href="#">移动端</a></li>
+                <li id="denglu"><a href="登录注册/登陆界面.html">登录</a></li>
+                <li id="zhuce"><a href="登录注册/注册界面.html">注册</a></li>
+            </ul>
+        </nav>
+    
+
+<div id="beijing">
+<div id="beijingzhong">
+
+<div id="beijingzuo">
+
+<img id="tupian1" src="图片/shouji.png">
+<img id="tupian2" src="图片/iphone-concept.png">
+<img id="tupian3" src="图片/wp.png">
+</div>
+
+<div id="yishuzi">
+<img src="图片/艺术字.png">
+</div>
+<div id="erweima">
+<img src="图片/二维码.png">
+</div>
+
+ <div id="beijingyou"> 
+ <div id="beijingyou1">
+
+ </div>
+ 
+ <div id="beijingyou2">
+
+ </div>
+ 
+ <div id="beijingyou3">
+
+ </div>
+ </div>
+
+
+</div>
+
+<div id="baitu">
+
+</div>
+</div>
+
+
+
+
+
+
+ <div id="no6">
+            <div class="页尾1">
+                <a href="网站信息/网站信息.html" class="button ros">网站信息</a>
+                <a href="联系我们/联系我们.html" class="button ros bigrounded">加入我们</a>
+                <a href="#" class="button ros medium">友情链接</a>
+                <a href="#" class="button ros small">官方认证</a>
+            </div>
+            <br /><br />
+            <div class="页尾2">
+                <a href="#" class="button rosy">帮助中心</a>
+                <a href="#" class="button rosy">侵权申诉</a>
+                <a href="#" class="button rosy">高级弹幕</a>
+                <a href="图册/图册.html" class="button rosy">壁纸站</a>
+                <a href="#" class="button rosy">名人堂</a>
+                <a href="#" class="button rosy">活动站</a>
+            </div>
+
+
+        </div>
+
+    
+</body>
+<script type="text/javascript" src="file:///F|/项目/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+window.onload = function (){
+  $("#tupian2").hide();
+  $("#tupian3").hide();	
+	}
+	
+$(document).ready(function(){
+	
+  $("#beijingyou1").hover(function(){
+  $("#tupian2").hide();
+  });
+   $("#beijingyou1").hover(function(){
+  $("#tupian3").hide();
+  });
+  $("#beijingyou1").hover(function(){
+  $("#tupian1").show();
+  });
+  
+  
+   $("#beijingyou2").hover(function(){
+  $("#tupian1").hide();
+  });
+   $("#beijingyou2").hover(function(){
+  $("#tupian3").hide();
+  });
+  $("#beijingyou2").hover(function(){
+  $("#tupian2").show();
+  });
+  
+  
+   $("#beijingyou3").hover(function(){
+  $("#tupian1").hide();
+  });
+   $("#beijingyou3").hover(function(){
+  $("#tupian2").hide();
+  });
+  $("#beijingyou3").hover(function(){
+  $("#tupian3").show();
+  });
+  
+});
+</script>
+</html>

@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	
+	/*body四周默认有8px的margin，不想要的话可以去掉*/
+	/*页面上如果大量用到某种字体，字体大小或颜色，可在body里设置，后面需要改的再去改*/
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #6B6854;
+	background:url(img/57cd2c34534ae.jpg);
+	text-align:center;
+	
+}
+ a 
+	 {text-decoration:none}
+nav{  
+        background: rgba(0,0,0,.3);
+		display: block;
+        width: 100%;  
+        height: 60px;       
+        position: absolute;  
+        z-index: 10;  
+    }  
+    nav ul{  
+		 width: 1500px;
+		 position: relative;
+		font: 12px Microsoft YaHei,arial,Helvetica,sans-serif;
+        list-style: none;  
+        margin: 0 auto;  
+
+        padding: 0;  
+    }  
+    nav ul li{  
+        text-align: center;  
+        float: left;  
+        line-height: 60px;  
+    }  
+    nav ul li a{  
+        width: 100px;  
+        color: #fff;  
+        font-size: 20px;  
+        font-weight: 600;  
+        display: block;  
+    }  
+    nav ul li a:hover,nav ul li a:visited{  
+        text-decoration: none;  
+        background:rgba(0,0,0,.5); 
+        color: #fff;  
+    }  
+	 
+	 #yemei{
+		 text-align: center;
+		 margin: 0 auto;
+		background-image:url(img/1.png);
+		height:180px;
+		}
+		#denglu{float:right;} 
+	    #zhuce{ float:right;}
+	
+
+	#sousuokuang {
+	    width: 1500px;
+		height:40px;
+		top:110px;
+		margin: 0 auto;
+	    position: relative; 
+
+		}
+	
+		#sousuokuang1 {
+		    padding: 0 12px;
+			width:300px;
+			color: #222;
+			font-size: 12px;
+			height:40px;
+			background-color: rgba(255, 255, 255, 0.88);
+		    border-radius: 6px;
+			border: 0;
+		    position: absolute;
+			right: 80px;
+		
+
+		}
+
+		#sousuokuang2 {
+			width: 80px;
+			height: 40px;
+			background-color: #0CF;
+			color: #FFF;
+			border: 0;
+			font-size: 18px;
+			font-family: 楷体;
+			cursor: pointer;
+    		position: absolute;
+			right: 0;
+			border-radius: 6px;
+		}
+
+	/*---------*/
+	/*---------*/
+	/*---------*/
+	/*---------*/
+	#mainDiv {
+	width: 1200px;
+		height:800px;
+		margin: 0 auto;
+        position:relative;
+		text-align:center;
+} 
+
+    #leftDiv {
+	width:25%px;
+	height:800px;
+	float:left;
+}
+    
+    /*所有列表*/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*左边div中的页面导航列表*/
+#ul_nav {
+	width: 240px;
+	height: 231px;
+	
+	padding-top: 28px;
+}
+/*导航列表中的列表项*/
+#ul_nav li {
+	width: 96px;
+	height: 27px;
+	
+	margin: 0 auto;
+	padding: 0 0 0 22px;
+	line-height: 27px; /*line-height打成和height一样可以达到一种垂直居中的效果*/
+	font-weight:bold;
+	font-size:16px;
+}
+
+/*左边列表中列表项中的超链接*/
+#ul_nav li a {
+	color: #8F8C73;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	display: block; /*转成块元素，这样宽度占据父元素的宽度，整个块成为超链接*/
+}
+/*左边列表中列表项中第一个超链接*/
+
+
+/*当鼠标悬在超链接上时*/
+#ul_nav li a:hover {
+	color:#939;
+}
+
+
+/*左边div里面第二个列表*/
+#ul_services{	
+	width:180px;
+	padding-left:60px;
+	font-weight:bold;
+}
+
+/*左边div里面的第二个列表里面的li里面的a元素*/
+#ul_services li a{
+	line-height:26px;
+	display:block;
+	background:url(img/%E5%B0%8F%E6%8C%87%E9%92%88.gif) 0 50% no-repeat;
+    color:#000;
+    font:13px;
+	padding-left:22px;
+	text-decoration:none;
+}
+
+/*左边div里面的第二个列表里面的li里面的a元素被悬停时的样式*/
+#ul_services li a:hover{
+	color:#369;	
+}
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+
+/*------------------------------------*/
+
+
+/*------------------------------------*/
+
+
+#rightDiv {
+	position:relative;
+	float:left;
+	font-size:36px;
+	font-weight:bold; 
+	width:75%;
+	height:400px;
+    margin: 0 auto;    
+    writing-mode:vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/ }
+#rightDiv a{	
+cursor: pointer;
+}	
+#rightDiv a:hover {
+	color:#C36;
+}
+#右下{
+	
+	width:75%;
+	right:10%;
+	height:280px;
+	float:right;}

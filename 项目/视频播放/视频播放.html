@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 player</title>
+	<meta charset="utf-8">
+<style type="text/css">
+body{ 
+     padding:0;
+	 
+	 margin: 0;
+	} 
+	 a 
+	 {text-decoration:none}
+    
+html{margin:0;}
+canvas{ position:absolute;
+	}
+.frame{
+	width: 800px;
+	margin:0px auto;
+}
+/*此处frame解决了居中问题*/
+.player{
+	height: 700px;
+	width: 800px;
+	position: relative;
+	top:100px;
+}
+.myvideo,.words{
+	position: absolute;
+}
+.myvideo{
+	width: 800px;
+	height: 450px;
+    top:0px;
+    z-index: 1;
+    left: 0;
+    background-color: #4F4F4F;
+}
+.words{
+	width: 100px;
+	height: 100px;
+	top: 100px;
+	left: 0;
+	z-index: 2;
+}
+.send{
+	position: absolute;
+	top: 500px;
+	left: 150px;
+	z-index: 4;
+}
+.danmu{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+    z-index: 10;
+    top: 100px;
+    left: 800px;
+/*    border: 1px solid white;*/
+    animation: myfirst 8s;
+    -moz-animation: myfirst 8s;	/* Firefox */
+    -webkit-animation: myfirst 8s;	/* Safari 和 Chrome */
+    -o-animation: myfirst 8s;	/* Opera */
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+@keyframes myfirst
+{
+from {left:800px;}
+to {left:-250px;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+from {left:800px;}
+to {left:-250px;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+from {left:800px;}
+to {left:-250px;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+from {left:800px;}
+to {left:-250px;}
+}
+
+.control{
+	width: 800px;
+	position: absolute;
+    top: 450px;
+    height: 40px;
+    background-color: #808080;
+}
+.play,.pause{
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 7.5px;
+	left: 20px;
+	display: inline-block;
+}
+.play:before{
+    border: 12.5px solid transparent;
+    border-left: 12.5px solid #000;
+    content: "";
+    position: absolute;
+    left:6.25px;
+}
+.pause:before{
+	height: 20px;
+	width: 5px;
+    content: "";
+    background-color: #000;
+    position: absolute;
+    right:6px;
+    top:2.5px;
+}
+.pause:after{
+	height: 20px;
+	width: 5px;
+    content: "";
+    background-color: #000;
+    position: absolute;
+    left:6px;
+    top:2.5px;
+}
+.fullscreen{
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	right: 20px;
+	top: 4px;
+	background:url('media/fullscreen.png') no-repeat center;
+	display: inline-block;
+}
+.progress{
+	position: absolute;
+	left:70px;
+	top:15px;
+	width: 493px;
+	height: 10px;
+    background:url('media/statbar.png') no-repeat 0px -29px;
+}
+.redline{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 0px;
+	height: 10px;
+	background:url('media/statbar.png') no-repeat 0px -65px;
+}
+.point{
+	position: absolute;
+	left:-5px;
+	top:-5px;
+	width:20px;
+	height:20px;
+	background:url('media/iconall.png') no-repeat 0px -250px;
+}
+.time{
+	font-size: 15px;
+	width: 100px;
+	position: absolute;
+	height: 40px;
+	line-height: 40px;
+	top:0px;
+	right:120px;
+}
+.start,.end{
+	display: inline-block;
+}
+.volume{
+    width: 40px;
+    height: 120px;
+    position: absolute;
+    right:65px;
+    bottom: 0px;
+    z-index: 11;
+}
+.volume-icon{
+	position: absolute;
+	bottom: 0px;
+	width: 40px;
+	height: 40px;
+	background: url(media/volume_on.png) no-repeat center;
+ }
+.volume-line{
+	display: none;
+	width: 12px;
+	height: 80px;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	background-color:#363636;
+	border-radius: 6px;
+}
+.volume-inline{
+	width: 6px;
+    height: 70px;
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    background-color:#FF4500;
+    border-radius: 3px;
+}
+.bar{
+	height: 5px;
+	width: 10px;
+	position: absolute;
+	top: 5px;
+	left:1px;
+	background-color:red;
+}
+
+    nav{  
+        background: rgba(0,0,0,.3);
+		display: block;
+        width: 100%;  
+        height: 60px;       
+        position: absolute;  
+        z-index: 10;  
+    }  
+    nav ul{  
+		 width: 1500px;
+		    position: relative;
+		font: 12px Microsoft YaHei,arial,Helvetica,sans-serif;
+        list-style: none;  
+        margin: 0 auto;  
+
+        padding: 0;  
+    }  
+    nav ul li{  
+        text-align: center;  
+        float: left;  
+        line-height: 60px;  
+    }  
+    nav ul li a{  
+        width: 100px;  
+        color: #fff;  
+        font-size: 20px;  
+        font-weight: 600;  
+        display: block;  
+    }  
+    nav ul li a:hover,nav ul li a:visited{  
+        text-decoration: none;  
+        background:rgba(0,0,0,.5); 
+        color: #fff;  
+    }  
+	 
+	 #yemei{
+		 text-align: center;
+		 margin: 0 auto;
+		background-image:url(1.png);
+		height:180px;
+		}
+		#denglu{float:right;} 
+	    #zhuce{ float:right;}
+	
+
+	#sousuokuang {
+	    width: 1500px;
+		height:40px;
+		top:110px;
+		margin: 0 auto;
+	    position: relative; 
+
+		}
+	
+		#sousuokuang1 {
+		    padding: 0 12px;
+			width:300px;
+			color: #222;
+			font-size: 12px;
+			height:40px;
+			background-color: rgba(255, 255, 255, 0.88);
+		    border-radius: 6px;
+			border: 0;
+		    position: absolute;
+			right: 80px;
+		
+
+		}
+
+		#sousuokuang2 {
+			width: 80px;
+			height: 40px;
+			background-color: #0CF;
+			color: #FFF;
+			border: 0;
+			font-size: 18px;
+			font-family: 楷体;
+			cursor: pointer;
+    		position: absolute;
+			right: 0;
+			border-radius: 6px;
+		}
+
+	
+#no1{
+		width:100%;
+		height: 50px;
+		float:left;
+		}
+		
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+}
+
+
+
+ul#导航>li{
+	float: left;
+}
+
+ul#导航>li>a{
+    font-family: 微软雅黑;
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    line-height:2;
+    font-size: 25px;
+    font-weight:400;
+}
+
+ul#导航>li>a:hover{
+	
+	color:#09F;	
+}
+
+
+
+
+
+
+	#no6{
+		position: relative;
+		margin-top:50px;
+	    height:150px;
+		width:100%;
+        background-size: cover;
+        display: inline-block;
+		text-align:center;
+		}
+		
+	.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	cursor: pointer;
+	text-align:center;
+	text-decoration: none;
+	font:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding: .5em 2em .55em;
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	}
+.button:hover {
+	text-decoration: none;
+	color:#06F;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.ros {
+	color: #fae7e9;
+	border: solid 1px #b73948;
+	background: #da5867;
+}
+.bigrounded {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+.页尾1>a{color: #333333;}
+.页尾1>a:hover{color:#0CC;}
+.页尾2>a{color: #333333;}
+.页尾2>a:hover{color:#0CC;}
+
+	
+	
+
+</style>
+</head>
+<body>
+
+
+<div id="yemei">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">主站</a></li>
+                <li><a href="#">画友</a></li>
+                <li><a href="#">游戏中心</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">周边</a></li>
+                <li><a href="#">移动端</a></li>
+                <li id="denglu"><a href="登录注册/登陆界面.html">登录</a></li>
+                <li id="zhuce"><a href="登录注册/注册界面.html">注册</a></li>
+            </ul>
+        </nav>
+        <div id="sousuokuang">
+            <span class="sousuokuangspan">
+			<input id="sousuokuang1" name="keyword" type="text" placeholder="这些童年动漫你都看过吗？">
+			</span>
+            <span class="sousuokuangspan"> 
+			<button id="sousuokuang2" type="submit">搜 库</button>
+			</span>
+        </div>
+    </div>
+
+
+
+<div id="no1">
+            <ul id="导航">
+                <li id="dongtu" style="position: absolute; left:0;"><img src="dongtu2.gif" /></li>
+                <li style="position: absolute; left:10%;"><a href="">首页</a></li>
+                <li style="position: absolute; left:20%;"><a href="">动画</a></li>
+                <li style="position: absolute; left:30%;"><a href="">番剧</a></li>
+                <li style="position: absolute; left:40%;"><a href="">国创</a></li>
+                <li style="position: absolute; left:50%;"><a href="">音乐</a> </li>
+                <li style="position: absolute; left:60%;"><a href="">舞蹈</a></li>
+                <li style="position: absolute; left:70%;"><a href="">游戏</a></li>
+                <li style="position: absolute; left:80%;"><a href="">科技</a></li>
+                <li style="position: absolute; left:90%;"><a href="">生活</a></li>
+
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="frame"  >
+<div class="player">
+	<video class="myvideo" src="media/play.mp4"></video>
+	<div class="control">
+		<div class="play" onclick="playV();"></div>
+		<div class="progress">
+			<div class="redline"></div>
+            <div class="point"></div>
+		</div>
+		<div class="time">
+            <div class="start">00:00 /</div>
+            <div class="end">10：00</div>
+		</div>
+		<div class="volume">
+			<div class="volume-icon"></div>
+			<div class="volume-line">
+				<div class="volume-inline"></div>
+			    <div class="bar"></div>
+			</div>
+		</div>
+		<div class="fullscreen" onclick="fullScreen();"></div>
+	</div>
+	<canvas class="words"></canvas>
+	<form class="send" onsubmit="return false;" style="position: absolute;left: 0px;">
+	<input type="text" class="sendtext" style="height: 20px;width: 700px;line-height: 20px;"></input>
+	<input type="button" class="submit" value="发送" style="height: 30px;width: 80px" onclick="send1()"></input>
+	</form>
+ </div>
+</div>
+
+        <div id="no6">
+            <div class="页尾1">
+                <a href="网站信息/网站信息.html" class="button ros">网站信息</a>
+                <a href="联系我们/联系我们.html" class="button ros bigrounded">加入我们</a>
+                <a href="#" class="button ros medium">友情链接</a>
+                <a href="#" class="button ros small">官方认证</a>
+            </div>
+            <br /><br />
+            <div class="页尾2">
+                <a href="#" class="button rosy">帮助中心</a>
+                <a href="#" class="button rosy">侵权申诉</a>
+                <a href="#" class="button rosy">高级弹幕</a>
+                <a href="图册/图册.html" class="button rosy">壁纸站</a>
+                <a href="#" class="button rosy">名人堂</a>
+                <a href="#" class="button rosy">活动站</a>
+            </div>
+
+
+        </div>
+
+
+
+
+</body>
+<script type="text/javascript">
+function $(s){
+	return document.querySelector(s);
+}
+var player=$('.player');
+var mytext=$('.words');
+var text=mytext.getContext('2d');
+
+var sendtext=$('.sendtext');
+document.addEventListener('keydown',function(e){
+if(e.keyCode=='13'){send1();}
+},false);
+function send1(){
+    var value=sendtext.value;
+	if(value==null){}
+    else{
+
+    	var danmu = document.createElement("canvas");
+    	player.appendChild(danmu);
+    	danmu.className='danmu';
+    	var ctx=danmu.getContext('2d');
+    	ctx.textBaseline= "top" ;
+    	ctx.textAlign = "left";
+    	// var width=ctx.measureText(value);
+    	ctx.font="35px 微软雅黑";
+    	ctx.fillStyle = '#fff';
+    	ctx.fillText(value,0,0);
+    	sendtext.value='';
+    }		
+}
+
+var play=$('.play');
+var video=$('.myvideo');
+var player=$('.player');
+var control=$('.control');
+
+function playV(){
+	if(play.className=='play'){
+        play.className='pause';
+        video.play();
+        end.innerHTML=secondToMinute(video.duration);
+	}
+	else{
+		video.pause();
+      play.className="play";
+	}
+}
+
+var progress=$('.progress');
+var redline=$('.redline');
+var point=$('.point');
+progress.onmousedown=function(e){
+	   //offsetLeft属性很重要
+         var left=player.offsetLeft+70;
+         redline.style.width=e.clientX-left+'px';
+         point.style.left=e.clientX-left-5+'px';
+         video.currentTime=(e.clientX-left)/493*video.duration;
+	};
+var start=$('.start');
+var end=$('.end');
+
+video.addEventListener('timeupdate',function(){
+    var len=(video.currentTime/video.duration)*493;
+	redline.style.width=len+"px";
+	point.style.left=len-5+"px";
+    start.innerHTML=secondToMinute(video.currentTime)+' /';
+},false);
+
+function secondToMinute(s){
+     var m=String(parseInt(s/60));
+     var s=String(parseInt(s%60));
+     if(m<10){m='0'+m;}
+     if(s<10){s='0'+s;}
+     return m+':'+s ;
+}
+
+function fullScreen()  
+{      
+
+        //W3C   
+        if (video.requestFullscreen) {  
+            video.requestFullscreen();  
+        }  
+            //FireFox   
+        else if (video.mozRequestFullScreen) {  
+            video.mozRequestFullScreen();  
+        }  
+            //Chrome等   
+        else if (video.webkitRequestFullScreen) {  
+            video.webkitRequestFullScreen();  
+        }  
+            //IE11   
+        else if (video.msRequestFullscreen) {  
+            video.msRequestFullscreen();  
+        }  
+}  
+var volume=$('.volume');
+var volumeLine=$('.volume-line');
+var volumeInline=$('.volume-inline');
+
+volume.onmouseover = function(){
+	volumeLine.style.display="block";
+}
+volume.onmouseout = function(){
+	volumeLine.style.display="none";
+}
+var bar = $('.bar');
+bar.onmousedown = function(e){
+     //volumeInline.style.height=(455-e.clientY)+'px';
+     //v=volumeInline.style.height;
+     // video.volume= v/70.0 ;
+     var thisY = e.clientY;
+     var top=control.offsetTop;
+     console.log(top);
+     document.onmousemove = function(e){
+     	var to=Math.min(70,Math.max(-2,70+(thisY-e.clientY)));
+         volumeInline.style.height=to+'px';
+        var bo=Math.min(65,Math.max(-2,5-(thisY-e.clientY)));
+         bar.style.top=bo+'px';
+     }
+     document.onmouseup = function(){document.onmousemove=null;}
+}
+
+var volumeIcon=$('.volume-icon');
+volumeIcon.onclick=function(){
+	if(volumeIcon.style.backgroundImage=="url(media/volume_on.png)"){
+		volumeIcon.style.backgroundImage="url(media/volume_off.png)";
+        // video.volume=0;
+        volumeInline.style.height=0+'px';
+	}
+	else{
+     volumeIcon.style.backgroundImage="url(media/volume_on.png)";
+      //  video.volume=v/70;
+        volumeInline.style.height=v+'px';   
+	}
+}
+
+</script>
+</html>

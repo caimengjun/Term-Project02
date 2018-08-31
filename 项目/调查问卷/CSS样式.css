@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{ 
+     padding:0;
+	 margin:0 auto;
+	} 
+	 a 
+	 {text-decoration:none}
+    
+	nav{  
+        background: rgba(0,0,0,.3);
+		display: block;
+        width: 100%;  
+        height: 60px;       
+        position: absolute;  
+        z-index: 10;  
+    }  
+    nav ul{  
+		 width: 1500px;
+		    position: relative;
+		font: 12px Microsoft YaHei,arial,Helvetica,sans-serif;
+        list-style: none;  
+        margin: 0 auto;  
+
+        padding: 0;  
+    }  
+    nav ul li{  
+        text-align: center;  
+        float: left;  
+        line-height: 60px;  
+    }  
+    nav ul li a{  
+        width: 100px;  
+        color: #fff;  
+        font-size: 20px;  
+        font-weight: 600;  
+        display: block;  
+    }  
+    nav ul li a:hover,nav ul li a:visited{  
+        text-decoration: none;  
+        background:rgba(0,0,0,.5); 
+        color: #fff;  
+    }  
+	 
+	 #yemei{
+		 text-align: center;
+		 margin: 0 auto;
+		background-image: url(1.png);
+		height:180px;
+		}
+		#denglu{float:right;} 
+	    #zhuce{ float:right;}
+	
+
+	#sousuokuang {
+	    width: 1500px;
+		height:40px;
+		top:110px;
+		margin: 0 auto;
+	    position: relative; 
+
+		}
+	
+		#sousuokuang1 {
+		    padding: 0 12px;
+			width:300px;
+			color: #222;
+			font-size: 12px;
+			height:40px;
+			background-color: rgba(255, 255, 255, 0.88);
+		    border-radius: 6px;
+			border: 0;
+		    position: absolute;
+			right: 80px;
+		
+
+		}
+
+		#sousuokuang2 {
+			width: 80px;
+			height: 40px;
+			background-color: #0CF;
+			color: #FFF;
+			border: 0;
+			font-size: 18px;
+			font-family: 楷体;
+			cursor: pointer;
+    		position: absolute;
+			right: 0;
+			border-radius: 6px;
+		}
+
+	
+	
+	
+	
+	
+	
+	
+.center {
+    
+    width: 1000px;
+
+	 margin:0 auto;
+	 padding-left:200px;
+	
+}
+
+
+div {
+
+    display: block;
+}
+body { 
+    padding: 0;
+    font-size: 12px;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    background: #fff;
+    color: #222;
+    min-width: 990px;
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+	
+}
+
+
+
+
+
+
+.line {
+    position: relative;
+    display: table;
+    width: 710px;
+    border-bottom: 1px solid #e5e9ef;
+    margin: 20px;
+    padding-bottom: 12px;
+}
+.submit {
+    position: relative;
+    width: 240px;
+    margin: 30px 220px 0;
+    background: url(icons.png) 50% no-repeat;
+    background-position: -23px -155px;
+    height: 80px;
+    cursor: pointer;
+}
+
+
+
+
+
+.line .question {
+    width: 93%;
+    padding-left: 24px;
+    margin: 5px 0;
+	
+}
+.line .choose {
+    position: relative;
+    display: table;
+    width: 100%;
+    margin: 17px 0 2px;
+    vertical-align: middle;
+}
+.line .question .t-warn {
+    color: #e40c0c;
+    font-size: 14px;
+    display: none;
+}
+
+
+
+.line .choose.width-aver-2 {
+    float: left;
+    width: 45%;
+}
+
+.line .choose .radio-btn {
+    position: relative;
+    display: block;
+    float: left;
+    vertical-align: middle;
+    width: 21px;
+    height: 21px;
+    bottom: 1px;
+    margin: 0 10px 0 40px;
+    background: url(icons.png) no-repeat;
+    background-position: -21px -21px;
+    cursor: pointer;
+}
+
+.line .choose.width-aver-2 .text {
+    width: auto;
+}
+.line .choose .text {
+    display: block;
+    float: left;
+    width: 600px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.line .question .title-20 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+.line .question .t-warn {
+    color: #e40c0c;
+    font-size: 14px;
+    display: none;
+}
+.line .choose.last-input-choose {
+    width: 99%;
+}
+.line .last-free, .line .last-input {
+    position: relative;
+    outline: none;
+    border: 1px solid #adbbdf;
+    width: 500px;
+    height: 20px;
+    border-radius: 4px;
+    left: 40px;
+    font-size: 14px;
+    padding: 10px;
+    resize: none;
+    font-family: Microsoft Yahei,tahoma,arial,Hiragino Sans GB,sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+}
+
+
+
+
+
+.line table {
+    position: relative;
+    width: 630px;
+    margin: 0 auto 20px;
+    border: 1px solid #d8e2fc;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.line table tbody tr:nth-child(2n), .line table thead tr {
+    background: #f0f2f8;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.line table th {
+    border: 1px solid #d8e2fc;
+    min-width: 90px;
+    padding: 10px 0;
+}
+
+th {
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+
+
+.line .choose.width-aver-3 {
+    float: left;
+    width: 32%;
+}
+
+.line .choose .checkbox-btn {
+    position: relative;
+    display: block;
+    float: left;
+    vertical-align: middle;
+    width: 21px;
+    height: 21px;
+    margin: 0 10px 0 40px;
+    background: url(icons.png) no-repeat;
+    background-position: -21px -86px;
+    cursor: pointer;
+}
+
+.line .choose.width-aver-3 .text {
+    width: auto;
+}
+
+.line .choose .text {
+    display: block;
+    float: left;
+    width: 600px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.line table th .table-radio-btn {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    width: 21px;
+    height: 21px;
+    margin: 0 auto;
+    background: url(icons.png) no-repeat;
+    background-position: -21px -21px;
+    cursor: pointer;
+}
+
+
+
+

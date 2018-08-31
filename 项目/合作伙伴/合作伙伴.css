@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */ 
+	 a 
+	 {text-decoration:none}
+    
+	nav{  
+        background: rgba(0,0,0,.3);
+		display: block;
+        width: 100%;  
+        height: 60px;       
+        position: absolute;  
+        z-index: 10;  
+    }  
+    nav ul{  
+		 width: 1500px;
+		    position: relative;
+		font: 12px Microsoft YaHei,arial,Helvetica,sans-serif;
+        list-style: none;  
+        margin: 0 auto;  
+
+        padding: 0;  
+    }  
+    nav ul li{  
+        text-align: center;  
+        float: left;  
+        line-height: 60px;  
+    }  
+    nav ul li a{  
+        width: 100px;  
+        color: #fff;  
+        font-size: 20px;  
+        font-weight: 600;  
+        display: block;  
+    }  
+    nav ul li a:hover,nav ul li a:visited{  
+        text-decoration: none;  
+        background:rgba(0,0,0,.5); 
+        color: #fff;  
+    }  
+	 
+	 #yemei{
+		 text-align: center;
+		 margin: 0 auto;
+		background-image:url(img/1.png);
+		height:180px;
+		}
+		#denglu{float:right;} 
+	    #zhuce{ float:right;}
+	
+
+	#sousuokuang {
+	    width: 1500px;
+		height:40px;
+		top:110px;
+		margin: 0 auto;
+	    position: relative; 
+
+		}
+	
+		#sousuokuang1 {
+		    padding: 0 12px;
+			width:300px;
+			color: #222;
+			font-size: 12px;
+			height:40px;
+			background-color: rgba(255, 255, 255, 0.88);
+		    border-radius: 6px;
+			border: 0;
+		    position: absolute;
+			right: 80px;
+		
+
+		}
+
+		#sousuokuang2 {
+			width: 80px;
+			height: 40px;
+			background-color: #0CF;
+			color: #FFF;
+			border: 0;
+			font-size: 18px;
+			font-family: 楷体;
+			cursor: pointer;
+    		position: absolute;
+			right: 0;
+			border-radius: 6px;
+		}
+
+	
+#main{
+	width:100%;
+	height:800px;
+		
+	}
+#上{  
+    width:100%;
+	height:400px;
+	background:url(img/3.jpg);
+	}
+
+
+body{ 
+     
+	 text-align:center;
+	 
+	}
+#中{
+	background:url(img/57cd2c34534ae.jpg);
+	height:200px;
+	position:relative;
+ }
+
+.clear{
+			float:left;
+			position:relative;
+			margin-left:300px;
+			top:50px;
+            
+        }
+		
+#页尾{
+		position: relative;
+	    
+		background:url(img/57cd2c34534ae.jpg);
+		height:200px;
+		width:100%;
+        background-size: cover;
+        display: inline-block;
+		text-align:center;
+		}
+		
+	.button {
+	
+	display: inline-block;
+	zoom: 1; /*zoom:1;属性是IE浏览器的专有属性，Firefox等其它浏览器不支持。它可以设置或检索对象的缩放比例。除此之外，它还有其他一些小作用，比如触发ie的hasLayout属性，清除浮动、清除margin的重叠等*/
+	vertical-align: baseline;/*垂直对齐一幅图像：*/
+	margin: 0 2px;
+	cursor: pointer;/*cursor 属性规定要显示的光标的类型（形状）。*/
+	text-align:center;
+	text-decoration: none;
+	font:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding: .5em .55em;
+	-webkit-border-radius: .5em; /*向 div 元素添加圆角边框*/
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	}
+.页尾1{
+	margin-top:50px;}
+.button:hover {
+	text-decoration: none;
+	color:#06F;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.ros {
+	color: #fae7e9;
+	border: solid 1px #b73948;
+	background: #da5867;
+}
+.bigrounded {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+.页尾1>a{color: #333333;}
+.页尾1>a:hover{color:#0CC;}
+.页尾2>a{color: #333333;}
+.页尾2>a:hover{color:#0CC;}
+
+	

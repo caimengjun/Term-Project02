@@ -1,0 +1,54 @@
+  <head>
+        <meta charset="utf-8">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="main.css">
+        <script type="text/javascript">
+		</script>
+        <style>
+        body{ margin:0;
+		padding:0;
+			}
+			a{ text-decoration:none;}
+        
+        </style>
+    </head>
+    <body>
+<!-- send the information to which webpage-->
+      <img style="width:100%;" src="top.png">
+      <form action="Signup.html" method="post" onSubmit="showTable()" name="user">
+      
+        <h1>注册</h1>
+        
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required placeholder="您的昵称，例：啦啦啦啦">
+          
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" required placeholder="您的密码，6—16个字符组成，区分大小写" >
+         <label for="area">Area:</label>
+        <select>
+      <OPTION value="opt1">选择您的地区</OPTION>
+      <OPTION value="opt2">中国大陆</OPTION>
+      <OPTION value="opt3">香港特别行政区</OPTION>
+      <OPTION value="opt4">台湾地区</OPTION>
+      <OPTION value="opt4">美国</OPTION>
+      <OPTION value="opt4">比利时</OPTION>
+      <OPTION value="opt4">澳大利亚</OPTION>
+      <OPTION value="opt4">法国</OPTION>
+      <OPTION value="opt4">日本</OPTION>
+      <OPTION value="opt4">韩国</OPTION>
+      </select>
+
+          <label>Tel：</label>
+   <input type="tel" id="tel" name="tel" required placeholder="您的手机">
+         
+        <label>继续注册，表明您已经同意<a href="网站注册协议.html">《网站注册协议》</a></label>   
+        
+    
+  <button type="submit" class="submit1"><a href="登陆界面.html">同意并注册<a/></button>
+        <button type="submit" class="submit2"><b>登陆</b></button>
+      </form>
+
+    </body>
+</html>
+

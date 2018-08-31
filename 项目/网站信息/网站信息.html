@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="网站信息.css" />
+<style type="text/css">
+body{ margin:0;
+     padding:0;
+	
+	}
+</style>
+<script src="RGraph.common.core.js"></script>
+<script src="RGraph.bar.js"></script>
+</head>
+
+<body>
+   <div id="yemei">
+        <nav>
+            <ul>
+                <li class="active"><a href="file:///H|/项目/页面.html">主站</a></li>
+                <li><a href="#">画友</a></li>
+                <li><a href="#">游戏中心</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">周边</a></li>
+                <li><a href="#">移动端</a></li>
+                <li id="denglu"><a href="登录注册/登陆界面.html">登录</a></li>
+                <li id="zhuce"><a href="登录注册/注册界面.html">注册</a></li>
+            </ul>
+        </nav>
+        <div id="sousuokuang">
+            <span class="sousuokuangspan">
+			<input id="sousuokuang1" name="keyword" type="text" placeholder="这些童年动漫你都看过吗？">
+			</span>
+            <span class="sousuokuangspan"> 
+			<button id="sousuokuang2" type="submit">搜 库</button>
+			</span>
+        </div>
+    </div>
+   
+   
+   <div id="mainDiv">
+    	<div id="leftDiv">
+        	
+            
+            <ul id="ul_nav">
+				<li><a href="#" id="home">主页</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">网络工作</a></li>
+				<li><a href="#">提交</a></li>
+				<li><a href="#">成果展示</a></li>
+				<li><a href="#">财务后勤</a></li>
+				<li><a href="#">联系我们</a></li>
+		   </ul>
+
+		
+        	<h2 id="services">服务</h2>
+            <ul id="ul_services">
+				<li><a href="#">音乐区</a></li>
+				<li><a href="#">舞蹈区</a></li>
+				<li><a href="#">动画区</a></li>
+				<li><a href="#">游戏区</a></li>
+				<li><a href="#">生活区</a></li>
+				<li><a href="#">鬼畜区</a></li>
+				<li><a href="#">影视区</a></li>
+				<li><a href="#">娱乐区</a></li>
+				<li><a href="#">时尚区</a></li>
+				<li><a href="#">动漫区</a></li>
+				<li><a href="#">科技区</a></li>
+              </ul>
+	 </div>
+     
+    <div id="rightDiv"><a id="点击" href="">海贼王</a><br /><br />
+                       <a href="">火影忍者</a><br /><br />
+                       <a href="">熊出没</a><br /><br />
+                       <a href="">名侦探柯南</a><br /><br />
+                       <a href="">妖怪名单</a><br /><br />
+                       <a href="">秦时明月</a><br /><br />
+                       <a href="">王牌御史</a><br /><br />
+                       <a href="">十万个冷笑话</a><br /><br />
+                       <a href="">圣斗士星矢</a><br /><br />
+    
+    
+    </div>
+    <div id="右下啊" >
+        <canvas id="cv" width="700" height="250" ></canvas>
+    
+    </div>
+    
+</div> 
+<script type="text/javascript">
+    	
+		var bar=new RGraph.Bar({
+			id:"cv",
+			data:[60,80,90,50,90],
+			options:{
+				labels:["喜欢" , "热爱" , "无感" , "讨厌","其它"],
+				colors:["blue",],
+				hmargin: 30
+			}
+			
+		});
+		
+		bar.wave();
+		
+
+
+
+
+  
+		
+function codefans(){
+var box=document.getElementById("右下啊");
+box.style.display="none"; 
+}
+setTimeout("codefans()",2000);//3秒，可以改动
+
+
+
+
+  </script>   
+     
+     
+</body>
+</html>
